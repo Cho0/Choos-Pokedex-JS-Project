@@ -1,0 +1,12 @@
+body {
+	font-weight: 300;
+	font-size: 25px;
+	line-height: 1.6;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	
+
+}
+
