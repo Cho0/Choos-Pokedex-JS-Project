@@ -42,11 +42,29 @@ function printArrayDetails(list){
 
 printArrayDetails(pokemonList);
 
-function divide(dividend, divisor){
-	if(divisor === 0){
-		return "You are trying to divide by zero"
+
+
+
+// calculator thing // 
+
+
+
+function add (num1, num2){
+ return num1 + num2;
+};
+
+function subtract (num1, num2){
+  return num1 - num2;
+};
+
+function multiply (num1, num2){
+ return num1 * num2;
+};
+
+function divide (num1, num2){
+	if(num2 === 0){
+		return "Not Allowed"
 	}else{
-		let result = dividend / divisor;
-		return result;
+		return num1 / num2;
 	}
 }
