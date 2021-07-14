@@ -24,13 +24,13 @@ let pokemonList = [
 	height: 1.7}
 	]
 	
-	for (let i = 0; i < pokemonList.length; i++){
-		document.write(
-			pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
-		);	
-		if (pokemonList[i].height > 1.5){
-			document.write("-its a big one");
-		}
+for (let i = 0; i < pokemonList.length; i++){
+	document.write(
+		pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
+	);	
+	if (pokemonList[i].height > 1.5){
+		document.write("-its a big one");
 	}
+}
 
 	
