@@ -24,13 +24,29 @@ let pokemonList = [
 	height: 1.7}
 	]
 	
-for (let i = 0; i < pokemonList.length; i++){
+/* for (let i = 0; i < pokemonList.length; i++){
 	document.write(
 		pokemonList[i].name + " (height: " + pokemonList[i].height + ")"
 	);	
-	if (pokemonList[i].height > 1.5){
+	if (pokemonList[i].height > 1.5) {
 		document.write("-its a big one");
 	}
-}
+} */
 
-	
+function printArrayDetails(list){
+	for (let i = 0; i < list.length; i++){
+		document.write("<p>" + list[i].name + "<p>")
+		console.log(list[i].name);
+	}
+}	
+
+printArrayDetails(pokemonList);
+
+function divide(dividend, divisor){
+	if(divisor === 0){
+		return "You are trying to divide by zero"
+	}else{
+		let result = dividend / divisor;
+		return result;
+	}
+}
