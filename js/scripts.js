@@ -52,7 +52,7 @@ let pokemonRepository = (function () {
 console.log(pokemonRepository.getAll() );
 
 pokemonRepository.getAll().forEach(function(pokemon){
-	document.write(pokemon.getAll + " ")
+	document.write(pokemon.name + " ")
 });
 
 
