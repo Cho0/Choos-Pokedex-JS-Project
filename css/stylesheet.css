@@ -10,3 +10,20 @@ body {
 
 }
 
+.button {
+	border: none;
+	color: grey;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 2px;
+	
+}
+
+.pokemon-list {
+	list-style-type: none;
+}
+
+.button:hover, .button:focus {
+	cursor: pointer;
+	opacity: 0.8;
+}	
