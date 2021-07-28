@@ -10,7 +10,7 @@ body {
 
 }
 
-.button {
+.button-class {
 	border: none;
 	color: grey;
 	text-decoration: none;
@@ -23,7 +23,7 @@ body {
 	list-style-type: none;
 }
 
-.button:hover, .button:focus {
+.button-class:hover, .button-class:focus {
 	cursor: pointer;
 	opacity: 0.8;
 }	
