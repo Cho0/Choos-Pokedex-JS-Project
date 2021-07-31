@@ -60,10 +60,17 @@ let pokemonRepository = (function () {
 		});
 	}
 
+	let modalButton = document.querySelector(".button-class");
+	let modalContainer = document.querySelector(".modal-container");
+
+	modalButton.addEventListener("click", function() {
+		modalContainer.classList.add(".show-modal")
+	});
+
+
 	function showDetails(item, text) {
 		loadDetails(item).then(function () {
 			console.log(item);
-			
 		});
 	}
 
