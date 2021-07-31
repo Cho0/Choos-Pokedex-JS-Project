@@ -60,11 +60,13 @@ let pokemonRepository = (function () {
 		});
 	}
 
-	function showDetails(item) {
+	function showDetails(item, text) {
 		loadDetails(item).then(function () {
 			console.log(item);
+			
 		});
 	}
+
 	return {
 		add: add,
 		getAll: getAll,
@@ -82,7 +84,6 @@ pokemonRepository.loadList().then(function () {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
-
 
 
 
