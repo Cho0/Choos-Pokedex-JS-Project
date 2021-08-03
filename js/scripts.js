@@ -62,7 +62,6 @@ let pokemonRepository = (function () {
 
 	function showDetails(item) {
 		loadDetails(item).then(function () {
-			console.log(item);
 		modalContainer.classList.add('show-modal');
 		showModal(item.name, item.height, item.imageUrl);
 		});	
@@ -70,25 +69,24 @@ let pokemonRepository = (function () {
 	}
 
 	function showModal(title, text, img) {
-			modalContainer.innerHTML = "";
-			let modal = document.createElement("div");
-			modal.classList.add("modal");
+		modalContainer.innerHTML = "";
+		let modal = document.createElement("div");
+		modal.classList.add("modal");
 
-			let closeButtonElement = document.createElement('button');
-				closeButtonElement.classList.add('modal-close');
-				closeButtonElement.innerText = 'Close';
-				closeButtonElement.addEventListener('click', hideModal);
+		let closeButtonElement = document.createElement('button');
+		closeButtonElement.classList.add('modal-close');
+		closeButtonElement.innerText = 'Close';
+		closeButtonElement.addEventListener('click', hideModal);
 
-			let pokemonName = document.createElement('h1');
-				pokemonName.innerText = title;
+		let pokemonName = document.createElement('h1');
+		pokemonName.innerText = title;
 
-			let pokemonHeight = document.createElement('p');
-				pokemonHeight.innerText = text;
+		let pokemonHeight = document.createElement('p');
+		pokemonHeight.innerText = text;
 
-			let frontImage = document.createElement("img"); 
-				frontImage.src = img;
-			
-
+		let frontImage = document.createElement("img"); 
+		frontImage.src = img;
+		
     modal.appendChild(closeButtonElement);
     modal.appendChild(pokemonName);
     modal.appendChild(pokemonHeight);
