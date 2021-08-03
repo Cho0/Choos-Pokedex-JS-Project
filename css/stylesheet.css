@@ -1,3 +1,7 @@
+*{
+	box-sizing: border-box;
+}
+
 body {
 	font-weight: 300;
 	font-size: 25px;
@@ -6,26 +10,27 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	
-
 }
 
 .button-class {
-	border: none;
+	border: 20px;
 	color: grey;
 	text-decoration: none;
-	padding: 10px;
+	padding: non;
 	border-radius: 2px;
-	
+	width: 300px;
+	height: 100px;
+	text-transform: capitalize;
 }
 
 .pokemon-list {
 	list-style-type: none;
 	text-align: center;
+	
 }
 
-li {
-	list-style-type: none;
+ul {
+	padding: 0px;
 }
 
 .button-class:hover, .button-class:focus {
@@ -55,19 +60,31 @@ li {
 .modal{
 	position: relative;
 	background-color: white;
-	width: 30%;
-	height: 30%;
+	width: 100%;
+	height: auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
 }
 
+h1 {
+	text-transform: capitalize;
+}
+
+img {
+	height: 150px;
+	width: 150px;
+	object-fit: contain;
+}
+
 .modal-close {
+
 	position: absolute;
 	top: 10px;
 	right: 15px;
 	cursor: pointer;
+	
 }
 
 .title {
