@@ -56,7 +56,6 @@ let pokemonRepository = (function () {
 			console.error(e);
 		})
 	}
-
 	
 	function loadDetails(item) {
 		let url = item.detailsUrl;
@@ -65,12 +64,12 @@ let pokemonRepository = (function () {
 		}).then(function (details) {
 			item.imageUrl = details.sprites.front_default;
 			item.height = details.height;
+			item.name = details.name;
 			item.types = details.types;
 		}).catch(function (e) {
 			console.error(e);
 		});
 	}
-
 
 	function showDetails(item) {
 		loadDetails(item).then(function () {
@@ -85,23 +84,17 @@ let pokemonRepository = (function () {
 		modalTitle.empty();
 		modalBody.empty();
 
-		let pokemonName = $("<h5>" + item.name + "</h5>");
-		pokemonName.addClass("pokemon-name")
-		let pokemonHeight = $("<p>" + item.height + "</p>");
+		let pokemonHeight = $("<p>" + "Height:" + " " + item.height + "</p>");
 		pokemonHeight.addClass("pokemon-height")
-		let frontImage = $(item.imageUrl);
-		frontImage.addClass("front-image ")
+		let frontImage = $("<img>");
+		frontImage.attr("src", item.imageUrl);
+		frontImage.addClass("front-image")
 	
 
-		modalTitle.append(pokemonName);
+		modalTitle.append(item.name);
 		modalBody.append(pokemonHeight);
 		modalBody.append(frontImage);
 	}
-
-
-	
-	
-	
 
 	//hiding the Modal
 	function hideModal() {
