@@ -89,9 +89,16 @@ let pokemonRepository = (function () {
 		let frontImage = $("<img>");
 		frontImage.attr("src", item.imageUrl);
 		frontImage.addClass("front-image")
-	
 
-		modalTitle.append(item.name);
+//type
+		let readableType = item.types.map((type) => {
+			return type.type.name
+		})
+
+		let typeString = readableType.join(', ')
+
+		
+		modalTitle.append(item.name + " " + item.types);
 		modalBody.append(pokemonHeight);
 		modalBody.append(frontImage);
 	}
@@ -130,3 +137,4 @@ pokemonRepository.loadList().then(function () {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
+
