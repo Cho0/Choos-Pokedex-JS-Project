@@ -13,7 +13,7 @@ let pokemonRepository = (function () {
 			console.log("pokemon is not correct");
 		}
 	}
-
+ 
 	function getAll() {
 		return pokemonList;
 	}
@@ -89,16 +89,13 @@ let pokemonRepository = (function () {
 		let frontImage = $("<img>");
 		frontImage.attr("src", item.imageUrl);
 		frontImage.addClass("front-image")
-
 //type
 		let readableType = item.types.map((type) => {
-			return type.type.name
+			return type.type.name;
 		})
-
-		let typeString = readableType.join(', ')
-
+		let typeString = readableType.join(', ');
 		
-		modalTitle.append(item.name + " " + item.types);
+		modalTitle.append(item.name + ":" + " " + typeString);
 		modalBody.append(pokemonHeight);
 		modalBody.append(frontImage);
 	}
@@ -120,6 +117,15 @@ let pokemonRepository = (function () {
 		}
 	});
 
+	function showSearch (){
+		let innerDot = document.querySelector(".ball-button");
+		let searchBar = document.querySelector(".search-bar")
+
+		innerDot.addEventListener("click", function() {
+			searchBar.classList.remove(".search-bar")
+		})
+	}
+
 	return {
 		add: add,
 		getAll: getAll,
@@ -129,6 +135,7 @@ let pokemonRepository = (function () {
 		loadDetails: loadDetails,
 		hideModal: hideModal,
 		showModal: showModal,
+		showSearch: showSearch,
 	};
 })();
 
@@ -137,4 +144,3 @@ pokemonRepository.loadList().then(function () {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
-
