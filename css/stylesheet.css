@@ -135,8 +135,13 @@ header {
 
 }
 
-.search-bar {
-	visibility: hidden;
-	animation-name: search-bar-slide;
-	animation-duration: 1s;
+.seach-bar{
+	background-color: #5f5f5f;
+	transform: translate(10px, 50px);
 }
+
+/*.show-search-bar {
+	visibility: hidden;
+	
+}
+
