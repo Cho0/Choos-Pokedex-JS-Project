@@ -141,23 +141,4 @@ header {
 	display: inline-block;
 }
  
-/*
-@keyframes search-bar-slide{
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(50%);
-	}
-
-}
-
-/*.seach-bar{
-	background-color: #5f5f5f;
-	transform: translate(10px, 50px);
-}
-.show-search-bar {
-	visibility: hidden;
-	
-}
 
