@@ -1,3 +1,13 @@
+:root {
+	--primary-color: #EEEEEE;
+	--secondary-color:grey;
+	--modal-color: white;
+	--header-color: #c52626d8;
+	--outer-dot: #5f5f5f;
+	--inner-dot: #dadada;
+}
+
+
 *{
 	box-sizing: border-box;
 }
@@ -14,14 +24,14 @@ body {
 
 .btn-primary {
 	border: 20px;
-	color: grey;
+	color: var(--secondary-color);
 	text-decoration: none;
 	padding: none;
 	border-radius: 6px;
 	width: 300px;
 	height: 100px;
 	text-transform: capitalize;
-	background-color: #EEEEEE;
+	background-color: var(--primary-color);
 	transform: translateY(80%);
 }
 
@@ -53,9 +63,9 @@ ul {
 }
 */
 
-.modal-content{
+.modal-content {
 	position: relative;
-	background-color: white;
+	background-color: var(--modal-color);
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -82,7 +92,13 @@ img {
 	height: auto;
 	width: 60%;
 	padding: 20px;
-	
+}
+
+@media all and (max-width: 700px) {
+	.pokemon-logo {
+		height: auto;
+		width: 350px;
+	}
 }
 
 .modal-title {
@@ -96,7 +112,7 @@ img {
 }
 
 header {
-	background-color: #c52626d8;
+	background-color: var(--header-color);
 }
 
 .pokeball-button {
@@ -106,7 +122,7 @@ header {
 .inner-dot {
 	height: 101px;
 	width: 101px;
-	background-color: #dadada;
+	background-color: var(--inner-dot);
 	border-radius: 50%;
 	margin-top: 17%;
 	transform: translateX(24%);
@@ -120,7 +136,7 @@ header {
 .dot {
 	height: 151px;
 	width: 151px;
-	background-color: #5f5f5f;
+	background-color: var(--outer-dot);
 	border-radius: 50%;
 	display: inline-block;
 }
