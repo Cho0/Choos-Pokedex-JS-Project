@@ -110,12 +110,12 @@ header {
 	border-radius: 50%;
 	margin-top: 17%;
 } 
-
+/*
 .ball-button:hover, .ball-button:focus {
 	cursor: pointer;
 	opacity: 0.8;
 }
-
+ to be implimented later*/
 .dot {
 	height: 151px;
 	width: 151px;
@@ -123,7 +123,25 @@ header {
 	border-radius: 50%;
 	display: inline-block;
 }
+ 
 
-.search-bar {
-	visibility: hidden;
+@keyframes search-bar-slide{
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(50%);
+	}
+
 }
+
+.seach-bar{
+	background-color: #5f5f5f;
+	transform: translate(10px, 50px);
+}
+
+/*.show-search-bar {
+	visibility: hidden;
+	
+}
+
