@@ -36,7 +36,7 @@ let pokemonRepository = (function () {
 		listpokemon.appendChild(button);
 		pokemonList.appendChild(listpokemon);
 
-		button.addEventListener("click", function (event) {
+		button.addEventListener("click", function () {
 			showDetails(pokemon);
 		});
 	}
@@ -116,7 +116,7 @@ let pokemonRepository = (function () {
 			hideModal();
 		}
 	});
-
+/*
 	function showSearch (){
 		let innerDot = document.querySelector(".ball-button");
 		let searchBar = document.querySelector(".search-bar")
@@ -125,7 +125,7 @@ let pokemonRepository = (function () {
 			searchBar.classList.remove(".search-bar")
 		})
 	}
-
+*/
 	return {
 		add: add,
 		getAll: getAll,
@@ -135,7 +135,7 @@ let pokemonRepository = (function () {
 		loadDetails: loadDetails,
 		hideModal: hideModal,
 		showModal: showModal,
-		showSearch: showSearch,
+		//showSearch: showSearch,
 	};
 })();
 
