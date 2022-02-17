@@ -25,3 +25,5 @@ and Regional Dex).
 
 For ease of access, I also think it's a good idea to load all the pokemon at once
 on one page because it is more practical for the user. Finding the fastest way to do it is another thing I would have to think about.
+
+![image](https://user-images.githubusercontent.com/86700844/154386685-4803bc69-ae71-4efb-8211-44a6b621eee9.png)
